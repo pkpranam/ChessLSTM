@@ -1,0 +1,29 @@
+# Model architecture params
+model:
+  embed_dim: 128
+  hidden_dim: 512
+  num_layers: 2
+  dropout: 0.5
+  embed_dropout: 0.2
+
+# Training hyperparams
+training:
+  epochs: 20
+  batch_size: 512
+  max_lr: 0.0015
+  weight_decay: 0.0005
+  grad_clip: 1.0
+
+# Data params
+data:
+  max_len: 20
+  train_inputs: "/kaggle/input/chess-dataset1/train_inputs.txt"
+  train_outputs: "/kaggle/input/chess-dataset1/train_outputs.txt"
+  val_inputs: "/kaggle/input/chess-dataset1/val_inputs.txt"
+  val_outputs: "/kaggle/input/chess-dataset1/val_outputs.txt"
+  dataset: "/kaggle/input/chess-dataset1/dataset.txt"
+
+# System
+system:
+  device: "cuda"
+  save_path: "/kaggle/working/best_model.pth"
